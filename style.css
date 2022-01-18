@@ -1,0 +1,16 @@
+#container { 
+    width: 800px;
+    height: 800px;
+    display: grid;
+}
+
+#container div {
+    border: dotted black 1px;
+    border-radius: 2px;
+}
+
+#reset {
+    background-color: rgb(191, 196, 226);
+    border: solid black 1px;
+    border-radius: 1px;
+}
