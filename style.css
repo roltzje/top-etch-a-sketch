@@ -5,8 +5,7 @@
 }
 
 #container div {
-    border: dotted black 1px;
-    border-radius: 2px;
+    border: solid black 1px;
 }
 
 #reset {
