@@ -9,19 +9,17 @@ slider.oninput = function () {
     size.innerHTML = this.value;
 }
 
-reset.addEventListener('click', generateGrid);
+reset.addEventListener('click', resetGrid);
+
+function resetGrid () {
+    document.getElementById("container").innerText = "";
+    generateGrid();
+}
 
 function generateGrid () {
-    document.getElementById("container").innerText = "";
-
-    let gridSize = window.prompt('How large of a grid?');
-
-    if (gridSize < 1 || gridSize > 100) {
-        gridSize = window.prompt('That\'s too big, enter a number less than 100');
-    }
+    let gridSize = slider.value;
 
     gridGenerator(gridSize);
-
     for (i=0; i < gridSize*gridSize; i++) {
         const box = document.createElement('div');
         container.appendChild(box);
